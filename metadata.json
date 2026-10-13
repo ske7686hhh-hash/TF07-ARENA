@@ -1,0 +1,6 @@
+{
+  "name": "TF07 Arena APK Builder & GitHub CI/CD",
+  "description": "Convert TF07 Arena into an Android APK using GitHub Actions CI/CD with automated cloud builds, live preview, and 1-click project export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
