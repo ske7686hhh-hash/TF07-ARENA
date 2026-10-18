@@ -1,18 +1,118 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TF07 Arena APK Builder & GitHub CI/CD</title>
-    <meta name="description" content="Convert TF07 Arena into an Android APK using GitHub Actions CI/CD with automated cloud builds, live preview, and 1-click project export." />
-    <meta property="og:title" content="TF07 Arena APK Builder & GitHub CI/CD" />
-    <meta property="og:description" content="Convert TF07 Arena into an Android APK using GitHub Actions CI/CD with automated cloud builds, live preview, and 1-click project export." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b12">
+<title>TF07 Arena — Free Fire Tournaments</title>
+<style>
+:root{--bg:#080b12;--panel:#111824;--panel2:#151f2d;--line:#27364a;--red:#ff3348;--orange:#ff7847;--text:#f4f7fb;--muted:#9ba9ba;--green:#48df91;--gold:#ffc857}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1a2331 0,#080b12 55%);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1040px;margin:auto;min-height:100vh;padding:0 15px 90px}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:12px}.brand{font-weight:1000;letter-spacing:.8px;font-size:22px;line-height:1}.brand b{color:var(--red)}.tag{font-size:10px;color:var(--muted);letter-spacing:2px;margin-top:5px}.pill{border:1px solid #4a2a37;background:#28131c;color:#ff9aa6;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800}.hero{background:linear-gradient(120deg,#24101a,#182334 58%,#25202a);border:1px solid #364154;border-radius:22px;padding:22px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-40px;top:-45px;background:linear-gradient(135deg,#ff334866,#ff784722);filter:blur(1px)}.eyebrow{font-size:11px;color:#ff9a85;font-weight:900;letter-spacing:2px}.hero h1{font-size:clamp(29px,6vw,48px);line-height:1.02;margin:10px 0}.hero p{color:#c5ced9;max-width:530px;margin:0 0 18px}.btn{border:0;border-radius:10px;background:linear-gradient(100deg,var(--red),#ff563b);color:white;font-weight:900;padding:12px 16px;box-shadow:0 8px 24px #ff334822}.btn.secondary{background:#202b3a;border:1px solid #35465a;box-shadow:none}.btn.small{padding:8px 11px;font-size:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0 22px}.stat{background:#111824;border:1px solid var(--line);border-radius:13px;padding:12px}.stat strong{font-size:21px;display:block}.stat span{font-size:11px;color:var(--muted)}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:22px 0 12px;gap:10px}.sectionhead h2{margin:0;font-size:19px}.muted{color:var(--muted)}.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:5px}.tab{white-space:nowrap;border:1px solid var(--line);background:#101722;color:#aab7c8;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:800}.tab.active{background:#35151e;border-color:#8e2b3b;color:#fff}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:linear-gradient(145deg,#151e2b,#0e141e);border:1px solid var(--line);border-radius:16px;padding:15px;min-width:0}.cardtop{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.mode{font-size:10px;font-weight:900;color:#ff9a85;letter-spacing:1px}.card h3{font-size:17px;margin:6px 0}.free{background:#123728;color:#72f2ac;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:900}.meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:11px 0}.cardfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:13px}.progress{height:5px;background:#273242;border-radius:99px;overflow:hidden;margin-top:7px}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--orange));border-radius:99px}.page{display:none}.page.active{display:block}.nav{position:fixed;bottom:0;left:0;right:0;background:#0c111bed;border-top:1px solid #27364a;backdrop-filter:blur(16px);display:flex;justify-content:center;z-index:5;padding:8px 4px calc(8px + env(safe-area-inset-bottom))}.navinner{width:min(100%,650px);display:grid;grid-template-columns:repeat(5,1fr);gap:3px}.nav button{border:0;background:none;color:#8190a4;padding:5px 2px;font-size:10px;font-weight:800}.nav button span{display:block;font-size:18px;margin-bottom:2px}.nav button.active{color:#ff5364}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:12px;color:#b9c5d4;font-weight:800}.field input,.field select{width:100%;background:#0a1019;color:#fff;border:1px solid #344458;border-radius:9px;padding:11px;outline:none}.field input:focus,.field select:focus{border-color:var(--red)}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.full{grid-column:1/-1}.notice{border:1px solid #514326;background:#211d13;color:#f6d58b;padding:11px;border-radius:10px;font-size:12px;margin:12px 0}.success{border-color:#235d42;background:#10271d;color:#8bf0b6}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:450px}.table th,.table td{text-align:left;padding:12px 9px;border-bottom:1px solid var(--line);font-size:12px}.table th{color:#94a4b8;font-size:10px;letter-spacing:1px}.rank{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:#202c3c;font-weight:900}.rank.gold{color:var(--gold);background:#382e16}.adminbox{border:1px solid #59323c;background:#1b1118;border-radius:16px;padding:16px;margin-bottom:14px}.roomsecret{filter:blur(5px);user-select:none}.roomsecret.revealed{filter:none;user-select:text}.empty{padding:24px;text-align:center;color:var(--muted)}.toast{position:fixed;top:14px;left:50%;transform:translate(-50%,-150%);background:#182638;border:1px solid #3a4d63;border-radius:12px;padding:12px 16px;z-index:10;transition:.25s;box-shadow:0 10px 40px #0008;max-width:90vw}.toast.show{transform:translate(-50%,0)}.smallnote{font-size:11px;color:var(--muted);margin-top:12px}
+@media(max-width:650px){.cards{grid-template-columns:1fr}.hero{padding:20px}.stats{gap:7px}.stat{padding:10px}.stat strong{font-size:18px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.sectionhead h2{font-size:17px}.top{padding-top:15px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div><div class="brand">TF07 <b>ARENA</b></div><div class="tag">FREE FIRE TOURNAMENTS</div></div><span class="pill">● FREE ENTRY</span></header>
 
+<main>
+<section class="page active" id="home">
+<div class="hero"><div class="eyebrow">YOUR BATTLE. OUR ARENA.</div><h1>Play smart.<br><span style="color:#ff4357">Win together.</span></h1><p>Find your next squad battle, register your team, and track every match from one place.</p><button class="btn" onclick="navigate('tournaments')">Explore tournaments →</button></div>
+<div class="stats"><div class="stat"><strong id="statT">3</strong><span>Open tournaments</span></div><div class="stat"><strong id="statTeams">0</strong><span>Your registrations</span></div><div class="stat"><strong>0</strong><span>Entry fee</span></div></div>
+<div class="sectionhead"><h2>Featured tournaments</h2><button class="btn secondary small" onclick="navigate('tournaments')">View all</button></div>
+<div class="cards" id="featured"></div>
+<div class="notice">Prototype mode: registrations and admin edits are stored on this device only. Online multi-user sync is not enabled yet.</div>
+</section>
+
+<section class="page" id="tournaments">
+<div class="sectionhead"><h2>Tournaments</h2><span class="muted" id="tourCount"></span></div>
+<div class="tabs" id="tourTabs"><button class="tab active" onclick="filterTours('All',this)">All</button><button class="tab" onclick="filterTours('Upcoming',this)">Upcoming</button><button class="tab" onclick="filterTours('Live',this)">Live</button><button class="tab" onclick="filterTours('Completed',this)">Completed</button></div>
+<div class="cards" id="tourList" style="margin-top:12px"></div>
+</section>
+
+<section class="page" id="register">
+<div class="sectionhead"><h2>Team registration</h2><span class="pill">FREE</span></div>
+<div class="card"><div class="muted" style="font-size:12px">Selected tournament</div><h3 id="selectedTitle">Squad Cup</h3><div class="meta"><span id="selectedMeta">Squad · Bermuda</span></div>
+<form id="regForm"><div class="formgrid">
+<div class="field"><label for="teamName">Team name *</label><input id="teamName" required maxlength="30" placeholder="e.g. TF07 Army"></div>
+<div class="field"><label for="captain">Captain / IGN *</label><input id="captain" required maxlength="24" placeholder="Your in-game name"></div>
+<div class="field"><label for="uid">Captain UID *</label><input id="uid" required inputmode="numeric" maxlength="20" placeholder="Player UID"></div>
+<div class="field"><label for="contact">Contact (optional)</label><input id="contact" maxlength="30" placeholder="Email or phone"></div>
+<div class="field full"><label>Squad member IGN + UID</label><input id="p2" placeholder="Player 2 — IGN / UID"></div>
+<div class="field full"><input id="p3" placeholder="Player 3 — IGN / UID"></div><div class="field full"><input id="p4" placeholder="Player 4 — IGN / UID"></div>
+</div><div class="notice">By registering, you agree to follow the tournament rules. Never share your account password or OTP.</div><button class="btn" type="submit">Register team</button></form></div>
+<div class="sectionhead"><h2>My registrations</h2></div><div id="myRegs"></div>
+</section>
+
+<section class="page" id="matches">
+<div class="sectionhead"><h2>Match schedule</h2><span class="muted">India time (IST)</span></div><div id="schedule"></div>
+<div class="sectionhead"><h2>Room details</h2></div><div id="rooms"></div>
+</section>
+
+<section class="page" id="leaderboard">
+<div class="sectionhead"><h2>Leaderboard</h2><span class="pill">DEMO SCORES</span></div>
+<div class="tabs"><button class="tab active" onclick="showBoard('overall',this)">Overall</button><button class="tab" onclick="showBoard('kills',this)">Kills</button><button class="tab" onclick="showBoard('placement',this)">Placement</button></div>
+<div class="card tablewrap" style="padding:5px;margin-top:12px"><table class="table"><thead><tr><th>RANK</th><th>TEAM</th><th>KILLS</th><th>PLACE PTS</th><th>TOTAL</th></tr></thead><tbody id="boardRows"></tbody></table></div>
+<div class="smallnote">Scoring rules: 1 point per kill. Placement points are configurable by the tournament admin. Example placement scale is shown below.</div>
+<div class="card" style="margin-top:12px"><h3>Example placement points</h3><div class="meta">1st: 12 · 2nd: 9 · 3rd: 8 · 4th: 7 · 5th: 6 · 6th: 5 · 7th: 4 · 8th: 3 · 9th: 2 · 10th: 1</div></div>
+</section>
+
+<section class="page" id="admin">
+<div class="sectionhead"><h2>Admin control</h2><span class="pill">LOCAL DEMO</span></div>
+<div class="notice">Demo admin panel: no secure sign-in yet. Do not use real sensitive data in this prototype. Production requires a protected admin account and server database.</div>
+<div class="adminbox"><h3>＋ Create tournament</h3><form id="createForm"><div class="formgrid">
+<div class="field"><label>Tournament name *</label><input id="newName" required placeholder="Weekend Squad Cup"></div>
+<div class="field"><label>Mode</label><select id="newMode"><option>Squad (4)</option><option>Duo (2)</option><option>Solo (1)</option></select></div>
+<div class="field"><label>Map</label><select id="newMap"><option>Bermuda</option><option>Kalahari</option><option>Purgatory</option><option>Alpine</option></select></div>
+<div class="field"><label>Date & time *</label><input id="newDate" type="datetime-local" required></div>
+<div class="field"><label>Max teams</label><input id="newMax" type="number" min="2" max="1000" value="48"></div>
+<div class="field"><label>Status</label><select id="newStatus"><option>Upcoming</option><option>Live</option><option>Completed</option></select></div>
+<div class="field"><label>Room ID (optional)</label><input id="newRoom" placeholder="Shown to approved teams"></div>
+<div class="field"><label>Room password (optional)</label><input id="newPass" placeholder="Keep private"></div>
+</div><button class="btn" type="submit">Create tournament</button></form></div>
+<div class="adminbox"><h3>✦ Approve registrations</h3><div id="adminRegs"></div></div>
+<div class="adminbox"><h3>⌁ Update team score</h3><form id="scoreForm"><div class="formgrid"><div class="field"><label>Team name</label><input id="scoreTeam" required placeholder="Exact team name"></div><div class="field"><label>Kills</label><input id="scoreKills" type="number" min="0" value="0" required></div><div class="field"><label>Placement points</label><input id="scorePlace" type="number" min="0" value="0" required></div></div><button class="btn" type="submit">Save score</button></form></div>
+</section>
+</main>
+</div>
+<nav class="nav"><div class="navinner">
+<button class="active" data-page="home" onclick="navigate('home')"><span>⌂</span>Home</button>
+<button data-page="tournaments" onclick="navigate('tournaments')"><span>🏆</span>Tournaments</button>
+<button data-page="matches" onclick="navigate('matches')"><span>▣</span>Matches</button>
+<button data-page="leaderboard" onclick="navigate('leaderboard')"><span>☷</span>Ranks</button>
+<button data-page="admin" onclick="navigate('admin')"><span>⚙</span>Admin</button>
+</div></nav><div class="toast" id="toast"></div>
+<script>
+const starter=[
+{id:1,name:"Squad Cup",mode:"Squad (4)",map:"Bermuda",date:"2026-10-20T20:00",max:48,status:"Upcoming",room:"",pass:""},
+{id:2,name:"Duo Showdown",mode:"Duo (2)",map:"Bermuda",date:"2026-10-21T18:30",max:32,status:"Upcoming",room:"",pass:""},
+{id:3,name:"Solo Battle",mode:"Solo (1)",map:"Kalahari",date:"2026-10-22T16:00",max:64,status:"Upcoming",room:"",pass:""}
+];
+const get=(k,d)=>{try{return JSON.parse(localStorage.getItem("tf07_"+k))??d}catch{return d}};
+const set=(k,v)=>localStorage.setItem("tf07_"+k,JSON.stringify(v));
+let tours=get("tours",starter), regs=get("regs",[]), scores=get("scores",[
+{team:"TG-LEGENDS",kills:26,place:12},{team:"TF07_ARMY",kills:23,place:9},{team:"BOSS_GAMING",kills:20,place:8},{team:"X-RAIDERS",kills:19,place:7},{team:"SKYFALL",kills:17,place:6}
+]), chosenId=1, tourFilter="All", boardMode="overall";
+function toast(s){let e=document.getElementById("toast");e.textContent=s;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),2400)}
+function fmt(d){if(!d)return "Time TBA";let x=new Date(d);return x.toLocaleString("en-IN",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",hour12:true})+" IST"}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function navigate(id){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));if(id==="tournaments")renderTours();if(id==="matches")renderMatches();if(id==="leaderboard")renderBoard();if(id==="admin")renderAdmin();if(id==="register")renderRegs();window.scrollTo({top:0,behavior:"smooth"})}
+function tourCard(t){let n=regs.filter(r=>r.tourId===t.id).length;return `<article class="card"><div class="cardtop"><span class="mode">${esc(t.mode.toUpperCase())} · ${esc(t.map.toUpperCase())}</span><span class="free">FREE ENTRY</span></div><h3>${esc(t.name)}</h3><div class="meta"><span>◷ ${fmt(t.date)}</span><span>♙ ${n}/${t.max} teams</span></div><div class="muted" style="font-size:11px">${esc(t.status)}</div><div class="progress"><i style="width:${Math.min(100,n/Math.max(1,t.max)*100)}%"></i></div><div class="cardfoot"><span class="muted" style="font-size:11px">Entry ₹0</span><button class="btn small" onclick="startReg(${t.id})">${t.status==="Completed"?"View":"Register"}</button></div></article>`}
+function renderTours(){let list=tours.filter(t=>tourFilter==="All"||t.status===tourFilter);document.getElementById("tourCount").textContent=list.length+" events";document.getElementById("tourList").innerHTML=list.length?list.map(tourCard).join(""):'<div class="empty">No tournaments in this category.</div>'}
+function filterTours(f,b){tourFilter=f;document.querySelectorAll("#tourTabs .tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderTours()}
+function startReg(id){let t=tours.find(x=>x.id===id);if(!t)return;if(t.status==="Completed"){toast("This tournament is completed.");return}chosenId=id;document.getElementById("selectedTitle").textContent=t.name;document.getElementById("selectedMeta").textContent=t.mode+" · "+t.map+" · "+fmt(t.date);navigate("register")}
+function renderRegs(){let mine=regs;document.getElementById("statTeams").textContent=mine.length;document.getElementById("myRegs").innerHTML=mine.length?mine.map(r=>`<div class="card" style="margin-bottom:9px"><div class="cardtop"><div><h3>${esc(r.team)}</h3><div class="muted" style="font-size:12px">${esc(r.tourName)}</div></div><span class="pill">${esc(r.status)}</span></div><div class="meta">Captain: ${esc(r.captain)} · UID: ${esc(r.uid)}</div></div>`).join(""):'<div class="empty">No registrations yet. Choose a tournament to register your team.</div>'}
+document.getElementById("regForm").addEventListener("submit",e=>{e.preventDefault();let t=tours.find(x=>x.id===chosenId);if(!t)return;if(regs.some(r=>r.tourId===chosenId&&r.team.toLowerCase()===document.getElementById("teamName").value.trim().toLowerCase())){toast("This team is already registered.");return}let r={id:Date.now(),tourId:t.id,tourName:t.name,team:document.getElementById("teamName").value.trim(),captain:document.getElementById("captain").value.trim(),uid:document.getElementById("uid").value.trim(),contact:document.getElementById("contact").value.trim(),members:[p2.value,p3.value,p4.value].filter(Boolean),status:"Pending"};regs.push(r);set("regs",regs);e.target.reset();renderRegs();renderHome();toast("Registration submitted! Pending admin approval.");});
+function renderHome(){document.getElementById("statT").textContent=tours.filter(t=>t.status!=="Completed").length;document.getElementById("statTeams").textContent=regs.length;document.getElementById("featured").innerHTML=tours.filter(t=>t.status!=="Completed").slice(0,2).map(tourCard).join("")||'<div class="empty">No open tournaments. Check back soon.</div>'}
+function renderMatches(){document.getElementById("schedule").innerHTML=tours.slice().sort((a,b)=>new Date(a.date)-new Date(b.date)).map(t=>`<div class="card" style="margin-bottom:10px"><div class="cardtop"><div><span class="mode">${esc(t.status.toUpperCase())}</span><h3>${esc(t.name)}</h3></div><span class="pill">${esc(t.mode)}</span></div><div class="meta"><span>◷ ${fmt(t.date)}</span><span>⌖ ${esc(t.map)}</span></div></div>`).join("")||'<div class="empty">No scheduled matches.</div>';
+let approved=regs.filter(r=>r.status==="Approved");document.getElementById("rooms").innerHTML=approved.length?approved.map(r=>{let t=tours.find(x=>x.id===r.tourId);return `<div class="card" style="margin-bottom:10px"><h3>${esc(r.tourName)}</h3><div class="meta">${esc(r.team)} · ${t?esc(t.map):""}</div><div class="field"><label>Room ID</label><div>${t&&t.room?esc(t.room):"Not announced yet"}</div></div><div class="field"><label>Room password</label><div>${t&&t.pass?`<span id="pass${t.id}" class="roomsecret">${esc(t.pass)}</span> <button class="btn secondary small" onclick="reveal('pass${t.id}')">Show</button>`:"Not announced yet"}</div></div></div>`}).join(""):'<div class="empty">Room details appear here after an admin approves your registration and adds room info.</div>'}
+function reveal(id){document.getElementById(id)?.classList.toggle("revealed")}
+function renderAdmin(){document.getElementById("adminRegs").innerHTML=regs.length?regs.map(r=>`<div class="card" style="margin:8px 0"><div class="cardtop"><div><h3>${esc(r.team)}</h3><div class="muted" style="font-size:12px">${esc(r.tourName)} · ${esc(r.captain)} · UID ${esc(r.uid)}</div></div><span class="pill">${esc(r.status)}</span></div><div class="cardfoot"><button class="btn small" onclick="setReg(${r.id},'Approved')">Approve</button><button class="btn secondary small" onclick="setReg(${r.id},'Rejected')">Reject</button></div></div>`).join(""):'<div class="empty">No teams have registered yet.</div>'}
+function setReg(id,status){regs=regs.map(r=>r.id===id?{...r,status}:r);set("regs",regs);renderAdmin();renderRegs();renderMatches();renderHome();toast("Registration "+status.toLowerCase()+".")}
+document.getElementById("createForm").addEventListener("submit",e=>{e.preventDefault();let t={id:Date.now(),name:newName.value.trim(),mode:newMode.value,map:newMap.value,date:newDate.value,max:Math.max(2,Number(newMax.value)||48),status:newStatus.value,room:newRoom.value.trim(),pass:newPass.value.trim()};tours.push(t);set("tours",tours);e.target.reset();newMax.value=48;renderAdmin();renderHome();renderTours();toast("Tournament created.");});
+document.getElementById("scoreForm").addEventListener("submit",e=>{e.preventDefault();let team=scoreTeam.value.trim();let item=scores.find(s=>s.team.toLowerCase()===team.toLowerCase());if(item){item.kills=Number(scoreKills.value);item.place=Number(scorePlace.value)}else scores.push({team,kills:Number(scoreKills.value),place:Number(scorePlace.value)});set("scores",scores);renderBoard();e.target.reset();toast("Score saved.");});
+function showBoard(mode,b){boardMode=mode;b.parentElement.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderBoard()}
+function renderBoard(){let list=[...scores].sort((a,b)=>boardMode==="kills"?b.kills-a.kills:boardMode==="placement"?b.place-a.place:(b.kills+b.place)-(a.kills+a.place));document.getElementById("boardRows").innerHTML=list.map((s,i)=>`<tr><td><span class="rank ${i===0?'gold':''}">${i+1}</span></td><td><strong>${esc(s.team)}</strong></td><td>${s.kills}</td><td>${s.place}</td><td><strong>${s.kills+s.place}</strong></td></tr>`).join("")}
+renderHome();renderTours();renderBoard();
+</script>
+</body></html>
